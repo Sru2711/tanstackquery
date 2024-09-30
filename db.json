@@ -1,101 +1,118 @@
 {
-    "posts": [
-        {
-            "id": "1",
-            "title": "Elon Musk Interview",
-            "body": "Discussing Mars mission"
-        },
-        {
-            "id": "2",
-            "title": "Marques Reviews Tesla",
-            "body": "Tesla's latest EV review"
-        },
-        {
-            "id": "3",
-            "title": "AI in 2024",
-            "body": "Impact on daily life"
-        }
-    ],
-    "fruits": [
-        {
-            "id": "1",
-            "name": "Apple"
-        },
-        {
-            "id": "2",
-            "name": "Banana"
-        },
-        {
-            "id": "3",
-            "name": "Orange"
-        },
-        {
-            "id": "4",
-            "name": "Strawberry"
-        },
-        {
-            "id": "5",
-            "name": "Mango"
-        },
-        {
-            "id": "6",
-            "name": "Pineapple"
-        },
-        {
-            "id": "7",
-            "name": "Grapes"
-        },
-        {
-            "id": "8",
-            "name": "Watermelon"
-        },
-        {
-            "id": "9",
-            "name": "Blueberry"
-        },
-        {
-            "id": "10",
-            "name": "Cherry"
-        },
-        {
-            "id": "11",
-            "name": "Peach"
-        },
-        {
-            "id": "12",
-            "name": "Plum"
-        },
-        {
-            "id": "13",
-            "name": "Kiwi"
-        },
-        {
-            "id": "14",
-            "name": "Papaya"
-        },
-        {
-            "id": "15",
-            "name": "Pomegranate"
-        },
-        {
-            "id": "16",
-            "name": "Lemon"
-        },
-        {
-            "id": "17",
-            "name": "Coconut"
-        },
-        {
-            "id": "18",
-            "name": "Pear"
-        },
-        {
-            "id": "19",
-            "name": "Guava"
-        },
-        {
-            "id": "20",
-            "name": "Lychee"
-        }
-    ]
+  "posts": [
+    {
+      "id": "1",
+      "title": "Elon Musk Interview",
+      "body": "Discussing Mars mission"
+    },
+    {
+      "id": "2",
+      "title": "Marques Reviews Tesla",
+      "body": "Tesla's latest EV review"
+    },
+    {
+      "id": "3",
+      "title": "AI in 2024",
+      "body": "Impact on daily life"
+    },
+    {
+      "id": "4c2f",
+      "title": "Hezbollah on Sunday confirmed the death of high-ranking official Nabil Kaouk",
+      "body": " Hezbollah's deputy leader has vowed to continue fighting Israel "
+    },
+    {
+      "id": "e4e7",
+      "title": "People scream, run off Bihar bridge as Kosi river water rises amid floods",
+      "body": "With heavy rains causing severe flooding in Bihar, a video shows people fleeing a bridge as the Kosi river swells."
+    },
+    
+    
+  ],
+  "fruits": [
+    {
+      "id": "1",
+      "name": "Apple"
+    },
+    {
+      "id": "2",
+      "name": "Banana"
+    },
+    {
+      "id": "3",
+      "name": "Orange"
+    },
+    {
+      "id": "4",
+      "name": "Strawberry"
+    },
+    {
+      "id": "5",
+      "name": "Mango"
+    },
+    {
+      "id": "6",
+      "name": "Pineapple"
+    },
+    {
+      "id": "7",
+      "name": "Grapes"
+    },
+    {
+      "id": "8",
+      "name": "Watermelon"
+    },
+    {
+      "id": "9",
+      "name": "Blueberry"
+    },
+    {
+      "id": "10",
+      "name": "Cherry"
+    },
+    {
+      "id": "11",
+      "name": "Peach"
+    },
+    {
+      "id": "12",
+      "name": "Plum"
+    },
+    {
+      "id": "13",
+      "name": "Kiwi"
+    },
+    {
+      "id": "14",
+      "name": "Papaya"
+    },
+    {
+      "id": "15",
+      "name": "Pomegranate"
+    },
+    {
+      "id": "16",
+      "name": "Lemon"
+    },
+    {
+      "id": "17",
+      "name": "Coconut"
+    },
+    {
+      "id": "18",
+      "name": "Pear"
+    },
+    {
+      "id": "19",
+      "name": "Guava"
+    },
+    {
+      "id": "20",
+      "name": "Lychee"
+    },
+    {
+      "id": "f70e",
+      "query": "\n    query IntrospectionQuery {\n      __schema {\n        \n        queryType { name }\n        mutationType { name }\n        subscriptionType { name }\n        types {\n          ...FullType\n        }\n        directives {\n          name\n          description\n          \n          locations\n          args {\n            ...InputValue\n          }\n        }\n      }\n    }\n\n    fragment FullType on __Type {\n      kind\n      name\n      description\n      \n      fields(includeDeprecated: true) {\n        name\n        description\n        args {\n          ...InputValue\n        }\n        type {\n          ...TypeRef\n        }\n        isDeprecated\n        deprecationReason\n      }\n      inputFields {\n        ...InputValue\n      }\n      interfaces {\n        ...TypeRef\n      }\n      enumValues(includeDeprecated: true) {\n        name\n        description\n        isDeprecated\n        deprecationReason\n      }\n      possibleTypes {\n        ...TypeRef\n      }\n    }\n\n    fragment InputValue on __InputValue {\n      name\n      description\n      type { ...TypeRef }\n      defaultValue\n      \n      \n    }\n\n    fragment TypeRef on __Type {\n      kind\n      name\n      ofType {\n        kind\n        name\n        ofType {\n          kind\n          name\n          ofType {\n            kind\n            name\n            ofType {\n              kind\n              name\n              ofType {\n                kind\n                name\n                ofType {\n                  kind\n                  name\n                  ofType {\n                    kind\n                    name\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  ",
+      "variables": {}
+    }
+  ]
 }

@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { useQuery } from 'react-query';
 import { Link } from 'react-router-dom';
 import { Button } from 'reactstrap';
+import PostRQ from './PostRQ';
 
 interface Post {
   id: number;
@@ -32,10 +33,11 @@ const [dataquery,setDataquery]=useState(false)
   return (
     <>
       <div>
+        
         {
           !dataquery && <Button onClick={()=> {refetch();setDataquery(true)}}>Fetch</Button>
         }
-       
+       <PostRQ/>
         {data && data.map((post) => (
           <>
          
