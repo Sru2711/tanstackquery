@@ -1,41 +1,52 @@
 import axios from 'axios';
-import React from 'react';
+import React, { useState } from 'react';
 import { useQuery } from 'react-query';
+import { Link } from 'react-router-dom';
+import { Button } from 'reactstrap';
 
 interface Post {
   id: number;
   title: string;
-  body: string;
+  body: string; 
 }
 
 
 const PostReactQuery = () => {
-
-  const { data, isLoading, isError, error } = useQuery<Post[],string>({
+const [dataquery,setDataquery]=useState(false)
+  const { data, isLoading, isError, error,refetch } = useQuery<Post[] ,string>({
     queryKey: ["posts"],
     queryFn: () => {
-      return axios.get("http://localhost:4000/posts").then((res) => res.data);
-    }
+      return axios.get("http://localhost:4000/posts").then((res):Post[] => res.data);
+    },
+    enabled:false
   });
 
   if (isLoading) {
-   <h3>Page is being loaded......</h3>
+   <h3><div>Loading...</div></h3>
   }
 
   if (isError) {
     <h3>{error}</h3>
   }
 
-
   return (
     <>
       <div>
-
+        {
+          !dataquery && <Button onClick={()=> {refetch();setDataquery(true)}}>Fetch</Button>
+        }
+       
         {data && data.map((post) => (
+          <>
+         
+          <Link to={`/PostQueryDetails/${post.id}`}>
           <div className="post-details-container" key={post.id}>
-            <h2 className="post-details-title">{post.title}</h2>
+            <h2>{post.id}--</h2><h2 className="post-details-title">{post.title}</h2>
             <h2 className="post-details-body">{post.body}</h2>
-          </div>
+            </div>
+            </Link>
+          </>
+         
         ))}
 
       </div>

@@ -6,7 +6,7 @@ body {
   padding: 0;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+ height: 100vh;
   width: 100%;
 }
 
@@ -14,6 +14,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height:100vh;
   width: 100%;
 }
 
@@ -21,7 +22,9 @@ body {
   height: 40vmin;
   pointer-events: none;
 }
-
+.nav-div{
+  width: 1200px;
+}
 nav {
   background-color: #2f3136;
   padding: 10px 20px;
@@ -112,10 +115,14 @@ nav ul li a.active {
   background-color: #2f3136;
   border-radius: 8px;
   padding: 20px;
-  width: 100%;
+  width: 80%;
   max-width: 600px;
   margin: 20px auto;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+.post-details-container:hover{
+  background-color: #ffffff35;
+  transition:all 0.5s ease-out;
 }
 
 .post-details-title {
