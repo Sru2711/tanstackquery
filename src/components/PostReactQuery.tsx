@@ -19,7 +19,7 @@ const [dataquery,setDataquery]=useState(false)
     queryFn: () => {
       return axios.get("http://localhost:4000/posts").then((res):Post[] => res.data);
     },
-    enabled:false
+   
   });
 
   if (isLoading) {
@@ -34,9 +34,8 @@ const [dataquery,setDataquery]=useState(false)
     <>
       <div>
         
-        {
-          !dataquery && <Button onClick={()=> {refetch();setDataquery(true)}}>Fetch</Button>
-        }
+        <Button onClick={()=> {refetch();setDataquery(true)}}>Fetch</Button>
+        
        <PostRQ/>
         {data && data.map((post) => (
           <>
